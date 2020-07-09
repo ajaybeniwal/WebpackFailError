@@ -5,8 +5,9 @@ module.exports = {
 	entry: path.resolve(process.cwd(), `src/ecp-troubleticket.js`),
 	output: {
 		path: path.resolve(process.cwd(), 'dist'),
-		libraryTarget: 'umd',
+		libraryTarget: 'system',
 		filename: 'bundle.js',
+		jsonpFunction: `webpackJsonp_troubleticket`,
 	},
 	module: {
 		rules: [

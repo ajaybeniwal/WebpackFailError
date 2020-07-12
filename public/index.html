@@ -16,7 +16,7 @@
 	<script>
 		System.import('http://localhost:3001/bundle.js').then((module)=>{
 			const defaultModule = module.default;
-			document.querySelector("#errorDispalyMessage").innerHTML = defaultModule && defaultModule() || "This is failure case instead it should have shown Webpack passed message if you downgrade the webpack in package.json you will see the corect message";
+			document.querySelector("#errorDispalyMessage").innerHTML = defaultModule && defaultModule() || "Failed case no default export found";
         });
 	</script>
 	<body >

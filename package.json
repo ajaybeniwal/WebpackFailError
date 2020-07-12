@@ -1,0 +1,31 @@
+{
+  "name": "webpackfailerror",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.common.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "run-p server client",
+    "server": "http-server",
+    "client": "webpack-dev-server --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajaybeniwal/WebpackFailError.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ajaybeniwal/WebpackFailError/issues"
+  },
+  "homepage": "https://github.com/ajaybeniwal/WebpackFailError#readme",
+  "dependencies": {
+    "http-server": "^0.12.3",
+    "webpack": "latest",
+    "webpack-dev-server": "3.11.0",
+    "webpack-cli": "3.3.12"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}

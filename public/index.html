@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- The first thing in any HTML file should be the charset -->
+	
+	<script src="https://cdn.jsdelivr.net/npm/import-map-overrides/dist/import-map-overrides.js"></script>
+	<script src="https://unpkg.com/systemjs@6.2.6/dist/system.min.js"></script>
+	<script src="https://unpkg.com/systemjs@6.2.6/dist/extras/amd.min.js"></script>
+	<script src="https://unpkg.com/systemjs@6.2.6/dist/extras/named-exports.min.js"></script>
+	<script src="https://unpkg.com/systemjs@6.2.6/dist/extras/named-register.min.js"></script>
+	<script src="https://unpkg.com/systemjs@6.2.6/dist/extras/use-default.min.js"></script>
+</head>
+
+<body>
+	<script>
+		System.import('http://localhost:3001/bundle.js').then((module)=>{
+			const defaultModule = module.default;
+			document.querySelector("#errorDispalyMessage").innerHTML = defaultModule && defaultModule() || "This is failure case instead it should have shown Webpack passed message if you downgrade the webpack in package.json you will see the corect message";
+        });
+	</script>
+	<body >
+		<div id="errorDispalyMessage"></div>
+	  </body>
+</body>
+
+</html>
